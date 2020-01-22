@@ -11,11 +11,11 @@ namespace SecurityLab1_Starter.Controllers
 {
     public class InventoryController : Controller
     {
+        [Authorize(Users ="testuser2")]
         // GET: Inventory
         public ActionResult Index()
         {
-            throw new DivideByZeroException();
-            //return View();
+            return View();
         }
 
 

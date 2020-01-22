@@ -26,6 +26,12 @@ namespace SecurityLab1_Starter
             );
 
             routes.MapRoute(
+                name: "Account",
+                url: "Account/{action}/{id}",
+                defaults: new { controller = "Account", action = "Login", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
                 name: "Inventory",
                 url: "Inventory/Index",
                 defaults: new { controller = "Inventory", action = "Index" }
